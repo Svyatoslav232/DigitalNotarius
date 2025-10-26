@@ -4,9 +4,7 @@
   "description": "Сайт Цифровой Нотариус - От идеи к MVP за 27 дней",
   "main": "index.html",
   "scripts": {
-    "start": "npx serve -p $PORT || npx serve -p 3000",
-    "build": "echo 'No build needed'",
-    "dev": "npx serve"
+    "start": "npx serve -s"
   },
   "engines": {
     "node": ">=14.0.0"
@@ -19,8 +17,7 @@
   ],
   "author": "",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "serve": "^14.0.0"
   }
 }
