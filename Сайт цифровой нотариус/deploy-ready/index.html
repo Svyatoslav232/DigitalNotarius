@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Цифровой Нотариус - От идеи к MVP за 27 дней</title>
+    <meta name="description" content="Революция в оформлении бытовых сделок. 48 задач выполнено за 27 дней. Следите за нашим прогрессом!">
+    <meta name="keywords" content="цифровой нотариус, MVP, спринт, блокчейн, стартап, разработка">
+    
+    <!-- Mobile Optimization -->
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Critical CSS to prevent flash -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            background: #0a0a0a !important;
+            color: #e5e7eb !important;
+            overflow-x: hidden !important;
+        }
+        .loading-screen {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: #0a0a0a !important;
+            z-index: 99999 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://digital-notary-future.ru/">
+    <meta property="og:title" content="Цифровой Нотариус - Будущее уже здесь">
+    <meta property="og:description" content="Революционная платформа цифрового нотариуса с блокчейн-технологиями">
+    <meta property="og:image" content="https://digital-notary-future.ru/images/og-image.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    
+    <!-- Three.js for 3D effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Цифровой Нотариус",
+        "description": "Революционная платформа цифрового нотариуса с блокчейн-технологиями",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "iOS, Android",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "RUB"
+        }
+    }
+    </script>
+</head>
+<body style="background: #0a0a0a !important;">
+    <!-- Loading Screen -->
+    <div class="loading-screen" style="background: #0a0a0a !important;">
+        
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="logo-icon">⚖️</div>
+                <div class="logo-text">Цифровой Нотариус</div>
+                <div class="loading-subtitle">Революция в оформлении сделок</div>
+            </div>
+            
+            <div class="loading-bar-container">
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+                <div class="loading-percentage">0%</div>
+            </div>
+            
+            <div class="loading-text">Инициализация системы...</div>
+            
+            <div class="loading-features">
+                <div class="loading-feature">
+                    <span class="loading-feature-icon">🔒</span>
+                    <span>Безопасность</span>
+                </div>
+                <div class="loading-feature">
+                    <span class="loading-feature-icon">⚡</span>
+                    <span>Скорость</span>
+                </div>
+                <div class="loading-feature">
+                    <span class="loading-feature-icon">🔗</span>
+                    <span>Блокчейн</span>
+                </div>
+                <div class="loading-feature">
+                    <span class="loading-feature-icon">📱</span>
+                    <span>Удобство</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">⚖️</div>
+                <div class="logo-text">Цифровой Нотариус</div>
+            </div>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link" data-text="Главная">Главная</a>
+                <a href="#sprint" class="nav-link" data-text="Спринт">Спринт</a>
+                <a href="#tech" class="nav-link" data-text="Технологии">Технологии</a>
+                <a href="#evolution" class="nav-link" data-text="Эволюция">Эволюция</a>
+                <a href="#team" class="nav-link" data-text="Команда">Команда</a>
+                <a href="#join-us" class="nav-link" data-text="Присоединиться">Присоединиться</a>
+            </div>
+            <div class="nav-cta">
+                <button class="btn btn-primary">
+                    <span class="btn-text">Запустить</span>
+                    <span class="btn-icon">▶</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <canvas id="particles-canvas"></canvas>
+            <div class="grid-overlay"></div>
+            <div class="holographic-elements">
+                <div class="holo-circle holo-1"></div>
+                <div class="holo-circle holo-2"></div>
+                <div class="holo-circle holo-3"></div>
+            </div>
+            <!-- Animated particles -->
+            <div class="hero-particles">
+                <div class="hero-particle" style="left: 10%; animation-delay: 0s;"></div>
+                <div class="hero-particle" style="left: 20%; animation-delay: 2s;"></div>
+                <div class="hero-particle" style="left: 30%; animation-delay: 4s;"></div>
+                <div class="hero-particle" style="left: 40%; animation-delay: 1s;"></div>
+                <div class="hero-particle" style="left: 50%; animation-delay: 3s;"></div>
+                <div class="hero-particle" style="left: 60%; animation-delay: 5s;"></div>
+                <div class="hero-particle" style="left: 70%; animation-delay: 0.5s;"></div>
+                <div class="hero-particle" style="left: 80%; animation-delay: 2.5s;"></div>
+                <div class="hero-particle" style="left: 90%; animation-delay: 4.5s;"></div>
+                <div class="hero-particle" style="left: 15%; animation-delay: 1.5s;"></div>
+                <div class="hero-particle" style="left: 25%; animation-delay: 3.5s;"></div>
+                <div class="hero-particle" style="left: 35%; animation-delay: 5.5s;"></div>
+                <div class="hero-particle" style="left: 45%; animation-delay: 6.5s;"></div>
+                <div class="hero-particle" style="left: 55%; animation-delay: 0.7s;"></div>
+                <div class="hero-particle" style="left: 65%; animation-delay: 2.7s;"></div>
+                <div class="hero-particle" style="left: 75%; animation-delay: 4.7s;"></div>
+                <div class="hero-particle" style="left: 85%; animation-delay: 6.7s;"></div>
+                <div class="hero-particle" style="left: 95%; animation-delay: 1.2s;"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                <div class="badge-circle">
+                    <span class="badge-text">СПРИНТ ЗАВЕРШЕН</span>
+                </div>
+                <div class="badge-glow"></div>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="title-line">От идеи к MVP</span>
+                <span class="title-line">за 27 дней</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                <span class="highlight">Цифровой Нотариус</span> — революция в оформлении бытовых сделок. 
+                Мы создали, достигли и планируем революционизировать индустрию нотариальных услуг
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="48">0</div>
+                    <div class="stat-label">задач ✓ 100% выполнено</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="27">0</div>
+                    <div class="stat-label">дней разработки</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">% эффективность команды</div>
+                </div>
+            </div>
+            
+            <div class="hero-actions">
+                <button class="btn btn-primary btn-large">
+                    <span class="btn-text">Узнать о возможностях</span>
+                    <span class="btn-icon">⚡</span>
+                </button>
+                <button class="btn btn-secondary btn-large">
+                    <span class="btn-text">Скачать MVP</span>
+                    <span class="btn-icon">📱</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="hologram-container">
+                <div class="hologram-screen">
+                    <div class="screen-content">
+                        <div class="data-stream">
+                            <div class="stream-line"></div>
+                            <div class="stream-line"></div>
+                            <div class="stream-line"></div>
+                        </div>
+                        <div class="security-indicator">
+                            <div class="security-icon">🔒</div>
+                            <div class="security-text">ЗАЩИЩЕНО</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sprint Section -->
+    <section class="sprint" id="sprint">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наш спринт</h2>
+                <p class="section-subtitle">48 задач выполнено за 27 дней. Следите за нашим прогрессом!</p>
+            </div>
+            
+            <div class="kanban-board">
+                <div class="kanban-column">
+                    <div class="column-header">
+                        <div class="column-icon">✅</div>
+                        <h3>Сделано</h3>
+                        <div class="task-count">48</div>
+                    </div>
+                    <div class="task-cards">
+                        <div class="task-card completed" data-task="architecture">
+                            <div class="task-header">
+                                <div class="task-title">Проектирование архитектуры</div>
+                                <div class="task-date">15-17.10</div>
+                            </div>
+                            <div class="task-description">Создание технической архитектуры и дизайн-системы</div>
+                            <div class="task-tags">
+                                <span class="tag">Дизайн</span>
+                                <span class="tag">Архитектура</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card completed" data-task="auth">
+                            <div class="task-header">
+                                <div class="task-title">Модуль авторизации</div>
+                                <div class="task-date">18-24.10</div>
+                            </div>
+                            <div class="task-description">Разработка системы регистрации и входа</div>
+                            <div class="task-tags">
+                                <span class="tag">Backend</span>
+                                <span class="tag">Безопасность</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card completed" data-task="media">
+                            <div class="task-header">
+                                <div class="task-title">Модули фиксации</div>
+                                <div class="task-date">25-31.10</div>
+                            </div>
+                            <div class="task-description">Фото, аудио и текстовая фиксация данных</div>
+                            <div class="task-tags">
+                                <span class="tag">Frontend</span>
+                                <span class="tag">Медиа</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card completed" data-task="blockchain">
+                            <div class="task-header">
+                                <div class="task-title">Интеграция блокчейна</div>
+                                <div class="task-date">01-07.11</div>
+                            </div>
+                            <div class="task-description">Подключение к Polygon и тестирование</div>
+                            <div class="task-tags">
+                                <span class="tag">Blockchain</span>
+                                <span class="tag">Тестирование</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card completed" data-task="release">
+                            <div class="task-header">
+                                <div class="task-title">Подготовка к релизу</div>
+                                <div class="task-date">08-10.11</div>
+                            </div>
+                            <div class="task-description">Финальная подготовка для TestFlight</div>
+                            <div class="task-tags">
+                                <span class="tag">Релиз</span>
+                                <span class="tag">QA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="kanban-column">
+                    <div class="column-header">
+                        <div class="column-icon">🔄</div>
+                        <h3>В работе</h3>
+                        <div class="task-count">3</div>
+                    </div>
+                    <div class="task-cards">
+                        <div class="task-card in-progress" data-task="feedback">
+                            <div class="task-header">
+                                <div class="task-title">Сбор обратной связи</div>
+                                <div class="task-date">11-17.11</div>
+                            </div>
+                            <div class="task-description">Анализ отзывов первых пользователей</div>
+                            <div class="task-tags">
+                                <span class="tag">Аналитика</span>
+                                <span class="tag">UX</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card in-progress" data-task="receipts">
+                            <div class="task-header">
+                                <div class="task-title">Модуль расписок</div>
+                                <div class="task-date">18-24.11</div>
+                            </div>
+                            <div class="task-description">Разработка модуля долговых обязательств</div>
+                            <div class="task-tags">
+                                <span class="tag">Функции</span>
+                                <span class="tag">Юридическая часть</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card in-progress" data-task="court">
+                            <div class="task-header">
+                                <div class="task-title">Интеграция с судами</div>
+                                <div class="task-date">25-30.11</div>
+                            </div>
+                            <div class="task-description">Подключение к судебным системам</div>
+                            <div class="task-tags">
+                                <span class="tag">Интеграция</span>
+                                <span class="tag">API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="kanban-column">
+                    <div class="column-header">
+                        <div class="column-icon">📋</div>
+                        <h3>Планы</h3>
+                        <div class="task-count">4</div>
+                    </div>
+                    <div class="task-cards">
+                        <div class="task-card planned" data-task="appstore">
+                            <div class="task-header">
+                                <div class="task-title">Публикация в App Store</div>
+                                <div class="task-date">Январь 2026</div>
+                            </div>
+                            <div class="task-description">Официальный релиз в магазине приложений</div>
+                            <div class="task-tags">
+                                <span class="tag">Релиз</span>
+                                <span class="tag">Маркетинг</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card planned" data-task="android">
+                            <div class="task-header">
+                                <div class="task-title">Android версия</div>
+                                <div class="task-date">Февраль 2026</div>
+                            </div>
+                            <div class="task-description">Запуск версии для Android</div>
+                            <div class="task-tags">
+                                <span class="tag">Разработка</span>
+                                <span class="tag">Кроссплатформа</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card planned" data-task="partnerships">
+                            <div class="task-header">
+                                <div class="task-title">Партнерство с риелторами</div>
+                                <div class="task-date">Март 2026</div>
+                            </div>
+                            <div class="task-description">Интеграция с риелторскими агентствами</div>
+                            <div class="task-tags">
+                                <span class="tag">Партнерство</span>
+                                <span class="tag">B2B</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card planned" data-task="government">
+                            <div class="task-header">
+                                <div class="task-title">Государственные сервисы</div>
+                                <div class="task-date">Апрель 2026</div>
+                            </div>
+                            <div class="task-description">Интеграция с госуслугами</div>
+                            <div class="task-tags">
+                                <span class="tag">Интеграция</span>
+                                <span class="tag">Государство</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="technology" id="tech">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Технологический стек</h2>
+                <p class="section-subtitle">Передовые технологии для максимальной безопасности</p>
+            </div>
+            
+            <div class="tech-visualization">
+                <div class="tech-orbit">
+                    <div class="orbit-center">
+                        <div class="center-core">
+                            <div class="core-icon">⚖️</div>
+                            <div class="core-text">Цифровой Нотариус</div>
+                        </div>
+                    </div>
+                    
+                    <div class="orbit-ring ring-1">
+                        <div class="tech-node" data-tech="swiftui">
+                            <div class="node-icon">📱</div>
+                            <div class="node-name">SwiftUI</div>
+                        </div>
+                        <div class="tech-node" data-tech="firebase">
+                            <div class="node-icon">🔥</div>
+                            <div class="node-name">Firebase</div>
+                        </div>
+                        <div class="tech-node" data-tech="polygon">
+                            <div class="node-icon">🔗</div>
+                            <div class="node-name">Polygon</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="tech-info">
+                    <div class="tech-info-card">
+                        <h3>Революционная технология</h3>
+                        <p>Цифровой Нотариус использует передовые технологии для обеспечения максимальной безопасности и удобства при оформлении бытовых сделок.</p>
+                        
+                        <div class="tech-features">
+                            <div class="tech-feature">
+                                <div class="feature-icon">📱</div>
+                                <div class="feature-content">
+                                    <h4>SwiftUI</h4>
+                                    <p>Современный интерфейс для iOS с нативным пользовательским опытом</p>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-feature">
+                                <div class="feature-icon">🔥</div>
+                                <div class="feature-content">
+                                    <h4>Firebase</h4>
+                                    <p>Облачная инфраструктура для хранения и синхронизации данных</p>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-feature">
+                                <div class="feature-icon">🔗</div>
+                                <div class="feature-content">
+                                    <h4>Polygon Blockchain</h4>
+                                    <p>Неизменяемые записи в блокчейне для юридической защиты</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Метрики успеха</h2>
+                <p class="section-subtitle">Ключевые показатели в реальном времени</p>
+            </div>
+            
+            <div class="dashboard-grid">
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <div class="metric-icon">✅</div>
+                        <div class="metric-title">Выполнено задач</div>
+                    </div>
+                    <div class="metric-value" data-target="48">0</div>
+                    <div class="metric-unit">/48</div>
+                    <div class="metric-chart">
+                        <div class="chart-bar" style="height: 100%"></div>
+                        <div class="chart-bar" style="height: 100%"></div>
+                        <div class="chart-bar" style="height: 100%"></div>
+                        <div class="chart-bar" style="height: 100%"></div>
+                        <div class="chart-bar" style="height: 100%"></div>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <div class="metric-icon">🧪</div>
+                        <div class="metric-title">Код покрыт тестами</div>
+                    </div>
+                    <div class="metric-value" data-target="87">0</div>
+                    <div class="metric-unit">%</div>
+                    <div class="metric-indicator">
+                        <div class="indicator-dot active"></div>
+                        <span>Отлично</span>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <div class="metric-icon">🔨</div>
+                        <div class="metric-title">Собрано билдов</div>
+                    </div>
+                    <div class="metric-value" data-target="47">0</div>
+                    <div class="metric-unit">билдов</div>
+                    <div class="build-timeline">
+                        <div class="build-dot"></div>
+                        <div class="build-dot"></div>
+                        <div class="build-dot"></div>
+                        <div class="build-dot"></div>
+                        <div class="build-dot active"></div>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <div class="metric-icon">👥</div>
+                        <div class="metric-title">Командная эффективность</div>
+                    </div>
+                    <div class="metric-value" data-target="98">0</div>
+                    <div class="metric-unit">%</div>
+                    <div class="efficiency-meter">
+                        <div class="meter-fill" style="width: 98%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evolution Section -->
+    <section class="evolution" id="evolution">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Эволюция продукта</h2>
+                <p class="section-subtitle">От идеи к будущему за 27 дней</p>
+            </div>
+            
+            <div class="evolution-slider">
+                <div class="slider-navigation">
+                    <button class="nav-btn prev-btn" id="prevBtn">
+                        <span class="btn-text">Назад</span>
+                        <span class="btn-icon">←</span>
+                    </button>
+                    <button class="nav-btn next-btn" id="nextBtn">
+                        <span class="btn-text">Вперед</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </div>
+                
+                <div class="evolution-content">
+                    <div class="evolution-slide active" data-slide="0">
+                        <div class="slide-visual">
+                            <div class="mvp-container">
+                                <div class="mvp-circles">
+                                    <div class="mvp-circle completed">
+                                        <div class="circle-icon">📱</div>
+                                        <div class="circle-text">Регистрация</div>
+                                    </div>
+                                    <div class="mvp-circle completed">
+                                        <div class="circle-icon">📸</div>
+                                        <div class="circle-text">Фотофиксация</div>
+                                    </div>
+                                    <div class="mvp-circle completed">
+                                        <div class="circle-icon">🔗</div>
+                                        <div class="circle-text">Блокчейн</div>
+                                    </div>
+                                    <div class="mvp-circle completed">
+                                        <div class="circle-icon">⚖️</div>
+                                        <div class="circle-text">Документы</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <div class="slide-phase">MVP ГОТОВ</div>
+                            <h3 class="slide-title">Текущая версия приложения</h3>
+                            <p class="slide-description">Все основные функции реализованы и работают в тестовом режиме</p>
+                            <div class="slide-features">
+                                <span class="feature-tag">SwiftUI</span>
+                                <span class="feature-tag">Firebase</span>
+                                <span class="feature-tag">Polygon</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="evolution-slide" data-slide="1">
+                        <div class="slide-visual">
+                            <div class="mvp-container">
+                                <div class="mvp-circles">
+                                    <div class="mvp-circle planned">
+                                        <div class="circle-icon">🤖</div>
+                                        <div class="circle-text">Android</div>
+                                    </div>
+                                    <div class="mvp-circle planned">
+                                        <div class="circle-icon">🧠</div>
+                                        <div class="circle-text">AI-анализ</div>
+                                    </div>
+                                    <div class="mvp-circle planned">
+                                        <div class="circle-icon">🏦</div>
+                                        <div class="circle-text">Банки</div>
+                                    </div>
+                                    <div class="mvp-circle planned">
+                                        <div class="circle-icon">🥽</div>
+                                        <div class="circle-text">AR</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <div class="slide-phase">2026 ПЛАНЫ</div>
+                            <h3 class="slide-title">Будущие возможности</h3>
+                            <p class="slide-description">Расширение функционала и интеграция с новыми технологиями</p>
+                            <div class="slide-features">
+                                <span class="feature-tag">AI Integration</span>
+                                <span class="feature-tag">AR/VR</span>
+                                <span class="feature-tag">IoT</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="evolution-slide" data-slide="2">
+                        <div class="slide-visual">
+                            <div class="mvp-container">
+                                <div class="mvp-circles">
+                                    <div class="mvp-circle future">
+                                        <div class="circle-icon">🌍</div>
+                                        <div class="circle-text">Глобально</div>
+                                    </div>
+                                    <div class="mvp-circle future">
+                                        <div class="circle-icon">🏛️</div>
+                                        <div class="circle-text">Госуслуги</div>
+                                    </div>
+                                    <div class="mvp-circle future">
+                                        <div class="circle-icon">🔮</div>
+                                        <div class="circle-text">Прогнозы</div>
+                                    </div>
+                                    <div class="mvp-circle future">
+                                        <div class="circle-icon">🚀</div>
+                                        <div class="circle-text">Инновации</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <div class="slide-phase">БУДУЩЕЕ</div>
+                            <h3 class="slide-title">Стратегическое видение</h3>
+                            <p class="slide-description">Долгосрочные планы развития и глобальное присутствие</p>
+                            <div class="slide-features">
+                                <span class="feature-tag">Global Scale</span>
+                                <span class="feature-tag">Government</span>
+                                <span class="feature-tag">Innovation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-indicators">
+                    <div class="indicator active" data-slide="0"></div>
+                    <div class="indicator" data-slide="1"></div>
+                    <div class="indicator" data-slide="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Команда за работой</h2>
+                <p class="section-subtitle">Эксперты, которые создали MVP за 27 дней</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="member-header">
+                        <div class="member-avatar">👨‍💻</div>
+                        <div class="member-info">
+                            <h3 class="member-name">Мишин Святослав</h3>
+                            <p class="member-role">Менеджер проекта / iOS-разработчик</p>
+                            <div class="member-contacts">
+                                <span class="contact-item">@Sv_MI12 ТГ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-skills">
+                        <span class="skill">SwiftUI</span>
+                        <span class="skill">Project Management</span>
+                        <span class="skill">iOS Development</span>
+                    </div>
+                    <div class="member-tasks">
+                        <div class="task-item">✅ Архитектура приложения</div>
+                        <div class="task-item">✅ Управление проектом</div>
+                        <div class="task-item">✅ MVP готов</div>
+                    </div>
+                    <div class="member-status">
+                        <div class="status-indicator online"></div>
+                        <span>Лидер команды</span>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="member-header">
+                        <div class="member-avatar">🎨</div>
+                        <div class="member-info">
+                            <h3 class="member-name">Зотов Дмитрий</h3>
+                            <p class="member-role">Дизайнер</p>
+                            <div class="member-contacts">
+                                <span class="contact-item">UI/UX Design</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-skills">
+                        <span class="skill">Figma</span>
+                        <span class="skill">Prototyping</span>
+                        <span class="skill">Design System</span>
+                    </div>
+                    <div class="member-tasks">
+                        <div class="task-item">✅ Дизайн-система</div>
+                        <div class="task-item">✅ Прототипы экранов</div>
+                        <div class="task-item">✅ UI готов</div>
+                    </div>
+                    <div class="member-status">
+                        <div class="status-indicator online"></div>
+                        <span>Дизайн завершен</span>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="member-header">
+                        <div class="member-avatar">⚖️</div>
+                        <div class="member-info">
+                            <h3 class="member-name">Ярица Анастасия</h3>
+                            <p class="member-role">Юрист-консультант</p>
+                            <div class="member-contacts">
+                                <span class="contact-item">Legal Expert</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-skills">
+                        <span class="skill">Legal Tech</span>
+                        <span class="skill">Compliance</span>
+                        <span class="skill">Documentation</span>
+                    </div>
+                    <div class="member-tasks">
+                        <div class="task-item">✅ Юридическая экспертиза</div>
+                        <div class="task-item">✅ Требования к документам</div>
+                        <div class="task-item">✅ Правовая база</div>
+                    </div>
+                    <div class="member-status">
+                        <div class="status-indicator online"></div>
+                        <span>Экспертиза завершена</span>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="member-header">
+                        <div class="member-avatar">🧪</div>
+                        <div class="member-info">
+                            <h3 class="member-name">Марков Георгий</h3>
+                            <p class="member-role">Тестировщик</p>
+                            <div class="member-contacts">
+                                <span class="contact-item">QA Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-skills">
+                        <span class="skill">QA Testing</span>
+                        <span class="skill">Automation</span>
+                        <span class="skill">Quality Control</span>
+                    </div>
+                    <div class="member-tasks">
+                        <div class="task-item">✅ Функциональное тестирование</div>
+                        <div class="task-item">✅ Автоматизация тестов</div>
+                        <div class="task-item">✅ 87% покрытие</div>
+                    </div>
+                    <div class="member-status">
+                        <div class="status-indicator online"></div>
+                        <span>Тестирование активно</span>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="member-header">
+                        <div class="member-avatar">✍️</div>
+                        <div class="member-info">
+                            <h3 class="member-name">Милихина Марина</h3>
+                            <p class="member-role">Копирайтер</p>
+                            <div class="member-contacts">
+                                <span class="contact-item">Content Writing</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-skills">
+                        <span class="skill">Content</span>
+                        <span class="skill">Marketing</span>
+                        <span class="skill">Brand Voice</span>
+                    </div>
+                    <div class="member-tasks">
+                        <div class="task-item">✅ Тексты интерфейса</div>
+                        <div class="task-item">✅ Маркетинговые материалы</div>
+                        <div class="task-item">✅ Контент готов</div>
+                    </div>
+                    <div class="member-status">
+                        <div class="status-indicator online"></div>
+                        <span>Контент готов</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us Section -->
+    <section class="join-us" id="join-us">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Присоединяйтесь к развитию</h2>
+                <p class="section-subtitle">Станьте частью истории создания прорывного продукта</p>
+            </div>
+            
+            <div class="join-content">
+                <div class="feedback-form">
+                    <div class="form-header">
+                        <h3>Обратная связь и предложения</h3>
+                        <div class="form-status">
+                            <div class="status-indicator online"></div>
+                            <span>Система активна</span>
+                        </div>
+                    </div>
+                    
+                    <form class="futuristic-form">
+                        <div class="form-group">
+                            <label class="form-label">Ваше имя</label>
+                            <input type="text" class="form-input" placeholder="Как к вам обращаться?" required>
+                            <div class="input-glow"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Email для связи</label>
+                            <input type="email" class="form-input" placeholder="your@email.com" required>
+                            <div class="input-glow"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Ваши предложения</label>
+                            <textarea class="form-input form-textarea" placeholder="Что бы вы хотели видеть в следующих версиях?" rows="4"></textarea>
+                            <div class="input-glow"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <span class="btn-text">Отправить предложение</span>
+                            <span class="btn-icon">🚀</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="voting-section">
+                    <div class="voting-header">
+                        <h3>Голосование за следующие функции</h3>
+                        <p>Выберите, что мы реализуем в первую очередь</p>
+                    </div>
+                    
+                    <div class="voting-options">
+                        <div class="voting-option" data-feature="android">
+                            <div class="option-header">
+                                <div class="option-icon">🤖</div>
+                                <div class="option-title">Android версия</div>
+                            </div>
+                            <div class="option-description">Разработка приложения для Android</div>
+                            <div class="voting-bar">
+                                <div class="vote-count" data-count="0">0</div>
+                                <div class="vote-progress">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <button class="vote-btn" data-feature="android">Голосовать</button>
+                        </div>
+                        
+                        <div class="voting-option" data-feature="ai">
+                            <div class="option-header">
+                                <div class="option-icon">🧠</div>
+                                <div class="option-title">AI-анализ документов</div>
+                            </div>
+                            <div class="option-description">Искусственный интеллект для проверки</div>
+                            <div class="voting-bar">
+                                <div class="vote-count" data-count="0">0</div>
+                                <div class="vote-progress">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <button class="vote-btn" data-feature="ai">Голосовать</button>
+                        </div>
+                        
+                        <div class="voting-option" data-feature="integration">
+                            <div class="option-header">
+                                <div class="option-icon">🔗</div>
+                                <div class="option-title">Интеграция с банками</div>
+                            </div>
+                            <div class="option-description">Подключение к банковским системам</div>
+                            <div class="voting-bar">
+                                <div class="vote-count" data-count="0">0</div>
+                                <div class="vote-progress">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <button class="vote-btn" data-feature="integration">Голосовать</button>
+                        </div>
+                        
+                        <div class="voting-option" data-feature="ar">
+                            <div class="option-header">
+                                <div class="option-icon">🥽</div>
+                                <div class="option-title">AR-документы</div>
+                            </div>
+                            <div class="option-description">Дополненная реальность для документов</div>
+                            <div class="voting-bar">
+                                <div class="vote-count" data-count="0">0</div>
+                                <div class="vote-progress">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <button class="vote-btn" data-feature="ar">Голосовать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">⚖️</div>
+                    <div class="logo-text">Цифровой Нотариус</div>
+                    <p>Будущее цифровых сделок уже здесь</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Продукт</h4>
+                        <a href="#hero">Главная</a>
+                        <a href="#sprint">Спринт</a>
+                        <a href="#tech">Технологии</a>
+                        <a href="#evolution">Эволюция</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Команда</h4>
+                        <a href="#team">Команда за работой</a>
+                        <a href="#join-us">Присоединиться</a>
+                        <a href="#">Карьера</a>
+                        <a href="#">Стажировка</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Сообщество</h4>
+                        <a href="#">TestFlight</a>
+                        <a href="#">Telegram</a>
+                        <a href="#">Discord</a>
+                        <a href="#">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Цифровой Нотариус. Все права защищены блокчейном.</p>
+                </div>
+                <div class="footer-status">
+                    <div class="status-indicator online"></div>
+                    <span>Система онлайн</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
