@@ -1,0 +1,9 @@
+[phases.setup]
+nixPkgs = ["nodejs-18_x"]
+
+[phases.build]
+cmds = []
+
+[phases.start]
+cmd = "npx serve -s -p $PORT"
+

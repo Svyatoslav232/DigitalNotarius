@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Сайт Цифровой Нотариус - От идеи к MVP за 27 дней",
   "main": "index.html",
-  "scripts": {
-    "start": "npx serve -s"
-  },
+  "scripts": {},
   "engines": {
     "node": ">=14.0.0"
   },
