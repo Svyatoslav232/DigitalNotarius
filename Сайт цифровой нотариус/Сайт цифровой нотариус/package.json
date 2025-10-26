@@ -1,0 +1,27 @@
+{
+  "name": "digital-notary-website",
+  "version": "1.0.0",
+  "description": "Сайт Цифровой Нотариус - От идеи к MVP за 27 дней",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve public -p $PORT",
+    "build": "echo 'No build step needed'",
+    "dev": "npx serve public"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": [
+    "digital-notary",
+    "notary",
+    "website",
+    "mvp"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}
+
